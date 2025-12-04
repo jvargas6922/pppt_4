@@ -31,6 +31,7 @@ persona = ("Ana", 25, "Argentina")
 print(coordenadas_1[1])
 # modificar el valor
 coordenadas_1[1] = 21.0
+
 # tupla
 # acceder a los valores
 print(coordenadas[1])
