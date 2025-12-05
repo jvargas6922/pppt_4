@@ -8,8 +8,8 @@ Consigna: ✍
 ● Desarrollar un programa que permita: 
 ● Registrar múltiples estudiantes representados por tuplas dentro de una lista.(listo)
 ● Mostrar todos los registros con formato legible. (listo)
-● Permitir consultar cuántos estudiantes son de una ciudad específica.
-● Mostrar la edad promedio de los estudiantes registrados.
+● Permitir consultar cuántos estudiantes son de una ciudad específica.(listo)
+● Mostrar la edad promedio de los estudiantes registrados. (listo)
 """
 
 """
@@ -56,6 +56,21 @@ for estudiante in estudiantes:
 print("----- Consulta por ciudad -----")
 conjunto_estudiantes = set(estudiantes)
 print(conjunto_estudiantes)
+
+input_ciudad = input("Ingrese la ciudad para consultar estudiantes: ")
+ciudad_ingresada =[]
+for estudiante in estudiantes:
+    if estudiante[2] == input_ciudad:
+        ciudad_ingresada.append(estudiante)
+
+print(f" Cantidad de estudiantes en la ciudad ingresada: {len(ciudad_ingresada)}")
+
+edad_estudiantes = []
+for estudiante in estudiantes:
+    edad_estudiantes.append(estudiante[1])
+
+edad_promedio =  round(sum(edad_estudiantes) / len(edad_estudiantes))
+print(f"La edad promedio de los estudiantes es: {edad_promedio}")
 
 
 """
